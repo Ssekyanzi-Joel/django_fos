@@ -8,10 +8,10 @@ branch = "main"
 [engine]
 node = "16.x"
 
-[[environments]]
+[environments]
 name = "production"
 
-[[environments.variables]]
+[environments.variables]
 key = "DJANGO_SECRET_KEY"
 
 [env.production]
