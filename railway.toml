@@ -3,7 +3,7 @@ image = "python"
 command = "python manage.py collectstatic --noinput && python manage.py migrate && gunicorn pizza.wsgi"
 
 [deploy]
-branch = "main"
+branch = "master"
 
 [engine]
 node = "16.x"
