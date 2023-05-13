@@ -13,3 +13,25 @@ name = "production"
 
 [[environments.variables]]
 key = "DJANGO_SECRET_KEY"
+
+[env.production]
+# Set your Django settings module here
+DJANGO_SETTINGS_MODULE = "pizza.settings.production"
+
+[container]
+dockerfile = "Dockerfile"
+image = "django_fos-web/pizza_app"
+tag = "latest"
+
+
+[ports]
+# Change the port number to the port number used by your Django app
+http = 8000
+
+directory = "django_fos"
+# Set the region for your app
+# Change this to the region used by your Railway project
+region = "us"
+# Set the name for your app
+# Change this to the name you want to give your Railway app
+name = "pizza"
